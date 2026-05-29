@@ -1,0 +1,62 @@
+\newcommand{\devanagarinumeral}[1]{%
+  \devanagaridigits{\number\csname c@#1\endcsname}}
+
+\newcommand{\textskt}[1]{{\la #1}}
+\newcommand{\textmaithili}[1]{{\mai #1}}
+\newcommand{\texten}[1]{{\en #1}}
+
+\newenvironment{maithili}{\begingroup\mai}{\endgroup}
+\newenvironment{shloka}{\begin{center}\la}{\end{center}}
+
+\newcommand{\sectionrule}[1][.1\linewidth]{\rule{#1}{.5pt}}
+
+% ── Colors & Ashtadhyayi tcolorbox Environments ───────────────
+\definecolor{OffWhite}{RGB}{245, 245, 240}
+\definecolor{DarkNavy}{RGB}{10, 20, 60}
+
+\definecolor{SutraBg}{RGB}{252, 245, 235}
+\definecolor{SutraFrame}{RGB}{180, 80, 0}
+\definecolor{AnuBg}{RGB}{235, 245, 252}
+\definecolor{AnuFrame}{RGB}{0, 100, 180}
+\definecolor{PadarthaBg}{RGB}{235, 252, 240}
+\definecolor{PadarthaFrame}{RGB}{0, 130, 80}
+\definecolor{VyakhyaBg}{RGB}{245, 235, 255}
+\definecolor{VyakhyaFrame}{RGB}{120, 60, 180}
+
+\tcbset{
+    grammarbox/.style 2 args={
+        enhanced, breakable,
+        attach boxed title to top left = {yshift=-2mm, xshift=4mm},
+        boxed title style = {
+            sharp corners, size=small,
+            colframe = #1, colback = #1
+        },
+        colframe = #1, colback = #2, sharp corners = south,
+        top = 4pt, bottom = 4pt, before skip = 8pt, after skip = 8pt
+    }
+}
+
+\newtcolorbox{sutra}[1]{
+    grammarbox={SutraFrame}{SutraBg},
+    title={\la \bfseries सूत्रम् #1},
+    fontupper=\la\Large,
+    halign=center
+}
+
+\newtcolorbox{anuvritti}{
+    grammarbox={AnuFrame}{AnuBg},
+    title={\la \bfseries अनुवृत्तिः / अधिकारः},
+    fontupper=\la
+}
+
+\newtcolorbox{padartha}{
+    grammarbox={PadarthaFrame}{PadarthaBg},
+    title={\la \bfseries पदार्थः / अन्वयः},
+    fontupper=\la
+}
+
+\newtcolorbox{vyakhya}[1][व्याख्या]{
+    grammarbox={VyakhyaFrame}{VyakhyaBg},
+    title={\hin \bfseries #1},
+    fontupper=\hin
+}

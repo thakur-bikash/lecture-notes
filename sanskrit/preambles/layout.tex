@@ -1,0 +1,16 @@
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{}
+
+\doublespacing
+
+\newcommand{\setchapterhead}[1]{\fancyhead[C]{#1}}
+\newcommand{\setlefthead}[1]{\fancyhead[LE]{\thepage}\fancyhead[CE]{#1}}
+\newcommand{\setrighthead}[1]{\fancyhead[RO]{\thepage}\fancyhead[CO]{#1}}
+
+\newcommand{\startdevanagaripages}{%
+  \renewcommand{\thepage}{\devanagarinumeral{page}}%
+  \fancyhead[LE]{\thepage}%
+  \fancyhead[RO]{\thepage}%
+  \renewcommand{\headrulewidth}{1pt}%
+}
