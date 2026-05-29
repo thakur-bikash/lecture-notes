@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+
+% =============================================================
+%  Load Preamble
+% =============================================================
+\input{./preamble.tex}
+
+% =============================================================
+%  Document metadata
+% =============================================================
+\newcommand{\docsubtitle}{Numerical Analysis and Scientific Computing — Lecture Notes}
+\title{%
+    {\sffamily\huge\bfseries\color{DarkNavy} Numerical Analysis and Scientific Computing}\\[6pt]
+    {\sffamily\large\color{AccentGray} Foundations, algorithms, and the software layer}
+}
+\author{{\sffamily Bikash Thakur}}
+\date{{\sffamily\small\color{AccentGray} \today}}
+
+% =============================================================
+\begin{document}
+% =============================================================
+
+\pagecolor{OffWhite}
+\color{DarkNavy}
+
+% ---- Title page --------------------------------------------
+\maketitle
+\thispagestyle{plain}
+
+\begin{abstract}
+\noindent
+We will cover numerical analysis from approximation and stability to large-scale algorithms, automatic differentiation, Monte Carlo, and probabilistic numerics.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% =============================================================
+%  Load Content
+% =============================================================
+\input{./content.tex}
+
+% ============================================================
+\printindex
+\end{document}

@@ -1,0 +1,154 @@
+\section{PART I --- FOUNDATIONS}
+
+\subsection{1. Errors, Conditioning, and Floating Point}
+\begin{itemize}
+\item IEEE arithmetic; machine epsilon; rounding models
+\item Condition number of a problem (not just a matrix)
+\item Forward and backward error analysis; Wilkinson's program
+\item Catastrophic cancellation; examples of unstable algorithms
+\end{itemize}
+
+\subsection{2. Polynomial Approximation and Interpolation}
+\begin{itemize}
+\item Lagrange and Newton interpolation; divided differences
+\item Chebyshev nodes; Runge's phenomenon; optimal point selection
+\item Spline interpolation: cubic splines, B-splines, tension splines
+\item Barycentric interpolation formula; numerical stability
+\end{itemize}
+
+\subsection{3. Approximation Theory}
+\begin{itemize}
+\item Best approximation in normed spaces; existence, uniqueness
+\item Chebyshev equioscillation theorem; Remez algorithm
+\item Orthogonal polynomials: Legendre, Chebyshev, Hermite, Laguerre
+\item Rational approximation; Pad\'e approximants
+\end{itemize}
+
+\subsection{4. Numerical Differentiation and Integration}
+\begin{itemize}
+\item Finite differences; Richardson extrapolation; accuracy
+\item Newton-Cotes formulas; error analysis
+\item Gaussian quadrature: nodes, weights, optimality
+\item Adaptive quadrature; Gauss-Kronrod; oscillatory integrals
+\end{itemize}
+
+\section{PART II --- CORE ALGORITHMS}
+
+\subsection{5. Direct Methods for Linear Systems}
+\begin{itemize}
+\item LU factorization; pivoting; stability analysis
+\item Cholesky for SPD; LDLT decomposition; tridiagonal systems
+\item QR factorization: Householder, Givens, modified Gram-Schmidt
+\item Least squares; pseudoinverse; rank-deficient problems; regularization
+\end{itemize}
+
+\subsection{6. Iterative Methods for Linear Systems}
+\begin{itemize}
+\item CG (SPD), MINRES (symmetric), GMRES (general), BiCGSTAB
+\item Convergence theory; spectral analysis; polynomial approximation view
+\item Preconditioning: ILU, incomplete Cholesky, algebraic multigrid (conceptual)
+\item Choosing a solver; practical considerations
+\end{itemize}
+
+\subsection{7. Eigenvalue Algorithms}
+\begin{itemize}
+\item Power method; inverse iteration; shift-and-invert
+\item QR algorithm with shifts and deflation; convergence theory
+\item Symmetric QR with Wilkinson shift; divide-and-conquer
+\item Krylov methods: Lanczos (symmetric), Arnoldi (general); thick restart
+\end{itemize}
+
+\subsection{8. Nonlinear Equations and Fixed Points}
+\begin{itemize}
+\item Bisection; secant method; Newton's method; convergence analysis
+\item Newton's method in $\mathbb{R}^n$; convergence, local vs.\ global
+\item Fixed-point iterations; Banach contraction; Aitken-Steffensen acceleration
+\item Homotopy and path-following methods; applications
+\end{itemize}
+
+\subsection{9. Numerical ODEs}
+\begin{itemize}
+\item One-step methods: Euler, Runge-Kutta, order conditions
+\item Multi-step methods: Adams, BDF; zero-stability; Dahlquist barrier
+\item Stiff systems; implicit methods; A-stability; L-stability
+\item Event detection; discontinuities; delay equations
+\end{itemize}
+
+\subsection{10. Numerical PDEs}
+\begin{itemize}
+\item Finite differences: elliptic, parabolic, hyperbolic; stability analysis
+\item Finite element methods: weak form, assembly, error analysis
+\item Spectral methods: Fourier, Chebyshev, pseudospectral collocation
+\item Multigrid: V-cycle, smoothers, convergence theory
+\end{itemize}
+
+\section{PART III --- MODERN METHODS}
+
+\subsection{11. Optimization Algorithms}
+\begin{itemize}
+\item Gradient descent and line search; Newton and quasi-Newton (BFGS, L-BFGS)
+\item Interior point methods; barrier approach
+\item Nonlinear least squares: Gauss-Newton, Levenberg-Marquardt
+\item Derivative-free optimization: Nelder-Mead, pattern search (brief)
+\end{itemize}
+
+\subsection{12. Automatic Differentiation}
+\begin{itemize}
+\item Forward mode via dual numbers; mathematical formalization
+\item Reverse mode (backpropagation) via computational graphs; chain rule at scale
+\item Jacobian-vector products (JVPs) and vector-Jacobian products (VJPs)
+\item Higher-order AD: forward-over-reverse; Hessian-vector products
+\item JAX, PyTorch autograd, Zygote (Julia) as implementations
+\item Adjoint method for PDE-constrained optimization; connection to Course 3 §22
+\end{itemize}
+
+\subsection{13. Monte Carlo and Quasi-Monte Carlo Methods}
+\begin{itemize}
+\item Classical Monte Carlo; variance estimation; confidence intervals
+\item Variance reduction: importance sampling, control variates, stratification
+\item Markov chain Monte Carlo: Metropolis-Hastings, Gibbs sampler
+\item Hamiltonian Monte Carlo; MALA
+\item Quasi-Monte Carlo: Halton and Sobol sequences; Koksma-Hlawka inequality
+\item Applications: Bayesian computation, uncertainty quantification, rare events
+\end{itemize}
+
+\subsection{14. High-Dimensional Numerical Methods}
+\begin{itemize}
+\item Curse of dimensionality: what breaks and what survives
+\item Sparse grids: Smolyak construction; dimension-adaptive variants
+\item Tensor decompositions in numerical PDE: TT/MPS, Tucker
+\item Sparse polynomial chaos; stochastic collocation for UQ
+\item Importance for quantum chemistry, financial mathematics, statistical learning
+\end{itemize}
+
+\subsection{15. Randomized Linear Algebra}
+\begin{itemize}
+\item Randomized SVD (Halko-Martinsson-Tropp); single-pass algorithms
+\item Johnson-Lindenstrauss lemma; random projections; sketching
+\item Randomized least squares; sketch preconditioners
+\item Nystr\"om approximation for kernel matrices; applications
+\end{itemize}
+
+\subsection{16. Structured Matrices and Fast Algorithms}
+\begin{itemize}
+\item Toeplitz and circulant matrices; FFT as diagonalization
+\item Hierarchical matrices (H-matrices): structure, arithmetic
+\item Fast multipole method (conceptual)
+\item Applications: structured covariance, integral equations
+\end{itemize}
+
+\subsection{17. Matrix Functions}
+\begin{itemize}
+\item Matrix exponential: scaling-squaring with Pad\'e; Krylov methods for large systems
+\item Other functions: square root, logarithm, sign, cosine
+\item Fr\'echet derivative of matrix functions; algorithmic differentiation
+\item Applications: network centrality, Markov chains, differential equations
+\end{itemize}
+
+\subsection{18. Probabilistic Numerics}
+\begin{itemize}
+\item Bayesian quadrature: integration with uncertainty quantification
+\item Gaussian process models for ODE solutions; probabilistic linear solvers
+\item Connections between numerical algorithms and Bayesian inference
+\item Uncertainty-aware scientific computing
+\end{itemize}

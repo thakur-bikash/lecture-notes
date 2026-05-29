@@ -1,0 +1,315 @@
+\section{PART I --- LINEAR ALGEBRA (THEORETICAL)}
+
+\subsection{1. Vector Spaces}
+\begin{itemize}
+\item Fields and definitions; vector spaces and subspaces
+\item Span, linear independence; bases and dimension
+\item Sum and direct sum of subspaces
+\item Quotient spaces; first isomorphism theorem for vector spaces
+\item Why this matters: all of PDE, signal processing, and ML live in vector spaces
+\end{itemize}
+
+\subsection{2. Linear Maps}
+\begin{itemize}
+\item Maps as the primary object, matrices as secondary
+\item Null space and range; rank-nullity theorem
+\item Isomorphisms; space of linear maps $L(V,W)$
+\item Quotient constructions; exact sequences (preview)
+\item Applications: linear systems, PDE operators, neural network layers
+\end{itemize}
+
+\subsection{3. Matrices as Representations}
+\begin{itemize}
+\item Matrix of a linear map in a basis; change of basis; similarity
+\item Row reduction as a computational tool; rank from the map perspective
+\item Equivalence vs.\ similarity vs.\ congruence
+\item Connection to numerical linear algebra (Part II)
+\end{itemize}
+
+\subsection{4. Dual Spaces}
+\begin{itemize}
+\item Linear functionals; dual space $V^*$; examples
+\item Dual basis; double dual and canonical isomorphism
+\item Transpose of a linear map; annihilators
+\item Reflexivity; connection to functional analysis and weak formulations in PDE
+\end{itemize}
+
+\subsection{5. Eigentheory}
+\begin{itemize}
+\item Eigenvalues and eigenvectors; characteristic polynomial
+\item Cayley-Hamilton theorem; consequences for matrix polynomials
+\item Invariant subspaces; triangularization over $\mathbb{C}$
+\item Generalized eigenvectors and Jordan normal form
+\item Minimal polynomial; relation to Jordan structure
+\item Applications: stability of ODEs, Google PageRank, PCA, Markov chains
+\end{itemize}
+
+\subsection{6. Inner Product Spaces}
+\begin{itemize}
+\item Inner products and norms; Cauchy-Schwarz
+\item Gram-Schmidt orthogonalization
+\item Orthogonal complements and projections; best approximation
+\item Adjoint $T^*$; normal, self-adjoint, unitary, and orthogonal operators
+\item Applications: least squares, QR factorization, signal decomposition
+\end{itemize}
+
+\subsection{7. Spectral Theory}
+\begin{itemize}
+\item Spectral theorem: real symmetric (orthogonal diagonalization)
+\item Spectral theorem: normal operators over $\mathbb{C}$
+\item Positive semidefinite operators; Cholesky as spectral factorization
+\item Singular value decomposition: existence, uniqueness, geometry
+\item Applications: PCA, dimensionality reduction, pseudoinverse, graph analysis
+\end{itemize}
+
+\subsection{8. Multilinear Algebra}
+\begin{itemize}
+\item Bilinear forms and quadratic forms; Sylvester's law of inertia
+\item Tensor products of vector spaces; universal property
+\item Exterior algebra; determinant as top exterior power; Pfaffian
+\item Symmetric powers; applications in physics, differential geometry, ML
+\item Tensor products as the foundation for all tensor decompositions (Part II)
+\end{itemize}
+
+\subsection{9. Modules and Canonical Forms}
+\begin{itemize}
+\item Modules over a ring; free modules; connection to vector spaces
+\item Structure theorem for finitely generated modules over a PID
+\item Jordan and rational canonical forms as corollaries
+\item Why this matters: unifies eigentheory; also underpins homological methods
+\end{itemize}
+
+\section{PART II --- LINEAR ALGEBRA (COMPUTATIONAL)}
+
+\subsection{10. Floating Point and Numerical Stability}
+\begin{itemize}
+\item IEEE arithmetic; machine epsilon; rounding models
+\item Condition number: of a matrix and of a problem
+\item Forward and backward error analysis; Wilkinson's approach
+\item Catastrophic cancellation; why naive algorithms fail
+\end{itemize}
+
+\subsection{11. LU and Cholesky Factorization}
+\begin{itemize}
+\item Gaussian elimination as LU factorization
+\item Partial and complete pivoting; stability analysis
+\item Cholesky for symmetric positive definite systems
+\item Solving $Ax = b$ stably; cost analysis
+\item Applications: scientific simulation, Bayesian linear systems
+\end{itemize}
+
+\subsection{12. QR Factorization}
+\begin{itemize}
+\item Modified Gram-Schmidt; why classical fails numerically
+\item Householder reflections; Givens rotations
+\item QR for least squares; normal equations vs.\ QR
+\item Rank-deficient least squares; pseudoinverse; regularization
+\item Applications: regression, overdetermined systems, data fitting
+\end{itemize}
+
+\subsection{13. Singular Value Decomposition (Computational)}
+\begin{itemize}
+\item Golub-Reinsch algorithm; bidiagonalization
+\item Truncated SVD; optimal low-rank approximation (Eckart-Young)
+\item Applications: PCA, image compression, latent semantic analysis, pseudoinverse
+\item Connection to randomized methods (Section 18)
+\end{itemize}
+
+\subsection{14. Tensor Decompositions and Tensor Networks}
+\begin{itemize}
+\item CP (CANDECOMP/PARAFAC) decomposition; alternating least squares
+\item Tucker decomposition; multilinear SVD (HOSVD)
+\item Tensor train (TT) / matrix product states; bond dimension
+\item NP-hardness of tensor rank; uniqueness conditions
+\item Applications: neural network compression, quantum many-body, high-dimensional PDEs
+\end{itemize}
+
+\subsection{15. Eigenvalue Algorithms}
+\begin{itemize}
+\item Power iteration; inverse iteration; shift-and-invert
+\item QR algorithm with shifts and deflation
+\item Symmetric QR with Wilkinson shift; divide-and-conquer
+\item Krylov subspace methods: Lanczos (symmetric), Arnoldi (general)
+\item Applications: Google PageRank, structural mechanics, Schr\"odinger operators
+\end{itemize}
+
+\subsection{16. Iterative Methods for Linear Systems}
+\begin{itemize}
+\item Krylov methods: CG (SPD), MINRES (symmetric), GMRES (general), BiCGSTAB
+\item Convergence theory; connection to polynomial approximation of eigenvalue distribution
+\item Preconditioning: ILU, incomplete Cholesky, algebraic multigrid (conceptual)
+\item CG as optimization; connection to Course 5
+\end{itemize}
+
+\subsection{17. Sparse Matrices}
+\begin{itemize}
+\item Storage formats: CSR, CSC, COO; arithmetic on sparse formats
+\item Sparse direct methods: fill-in, reordering (AMD, nested dissection)
+\item Sparse iterative methods in practice; choosing a solver
+\item Applications: large-scale PDE, graph problems, network analysis
+\end{itemize}
+
+\subsection{18. Randomized Linear Algebra}
+\begin{itemize}
+\item Randomized SVD (Halko-Martinsson-Tropp); single-pass variant
+\item Sketching and random projections; Johnson-Lindenstrauss lemma
+\item Randomized least squares; sketch-and-solve; sketch preconditioners
+\item Kaczmarz algorithm as SGD on normal equations
+\item Applications: large-scale ML, streaming data, massive linear systems
+\end{itemize}
+
+\subsection{19. Spectral Graph Theory}
+\begin{itemize}
+\item Graph Laplacian (combinatorial and normalized); spectrum examples
+\item Cheeger inequality: algebraic connectivity vs.\ graph expansion
+\item Random walks on graphs; stationary distributions; mixing times
+\item Spectral clustering; manifold learning (Laplacian eigenmaps, diffusion maps)
+\item PageRank; graph neural networks as spectral operators
+\end{itemize}
+
+\subsection{20. Structured Matrices and Fast Algorithms}
+\begin{itemize}
+\item Toeplitz, circulant, Hankel matrices; displacement rank
+\item FFT as diagonalization of circulant matrices
+\item Hierarchical matrices (H-matrices): structure and arithmetic (brief)
+\item Fast multipole method (conceptual); applications to $N$-body and integral equations
+\end{itemize}
+
+\subsection{21. Matrix Functions and Matrix Calculus}
+\begin{itemize}
+\item Matrix exponential: Pad\'e approximation and scaling-squaring
+\item Other functions: square root, logarithm, sign; Krylov approximation
+\item Fr\'echet derivative of matrix functions
+\item Matrix calculus: gradients and Hessians of scalar matrix functions
+\item Applications: ODE solvers, network analysis, optimization on matrix manifolds
+\end{itemize}
+
+\section{PART III --- ABSTRACT ALGEBRA IN SERVICE OF APPLICATIONS}
+
+\subsection{22. Groups and Symmetry}
+\begin{itemize}
+\item Definitions and examples: symmetric, cyclic, dihedral, matrix groups
+\item Subgroups; Lagrange's theorem; cosets; normal subgroups
+\item Why this matters: symmetry is a modeling primitive in physics, chemistry, and ML
+\end{itemize}
+
+\subsection{23. Group Homomorphisms and Quotients}
+\begin{itemize}
+\item Homomorphisms and isomorphisms
+\item Quotient groups; isomorphism theorems
+\item Direct products; semidirect products
+\item Applications: symmetry breaking, gauge theory, signal processing on groups
+\end{itemize}
+
+\subsection{24. Group Actions and Symmetry in Computation}
+\begin{itemize}
+\item Actions, orbits, stabilizers; orbit-stabilizer theorem
+\item Burnside's lemma; counting with symmetry
+\item Cayley's theorem; conjugacy classes; class equation
+\item Applications: molecular symmetry, enumeration, equivariant architectures
+\end{itemize}
+
+\subsection{25. Sylow Theory and Group Structure}
+\begin{itemize}
+\item Sylow theorems: existence, conjugacy, number (statements and proofs)
+\item Classification of groups of small orders; direct applications
+\item Simple groups: $A_5$ is simple (one proof)
+\item Classification of finite abelian groups
+\item Applied payoff: understanding symmetry groups of physical systems; underpins representation theory
+\end{itemize}
+
+\subsection{26. Rings and Arithmetic}
+\begin{itemize}
+\item Definitions; examples ($\mathbb{Z}$, polynomial rings, matrix rings, $\mathbb{Z}/n\mathbb{Z}$)
+\item Ideals, quotient rings, ring homomorphisms; isomorphism theorems
+\item Product rings and Chinese Remainder Theorem (with algorithm)
+\item Prime and maximal ideals
+\item Applications: modular arithmetic, error-correcting codes, cryptography
+\end{itemize}
+
+\subsection{27. Divisibility, Factorization, and Polynomial Rings}
+\begin{itemize}
+\item ED $\to$ PID $\to$ UFD: the hierarchy; emphasis on payoffs
+\item Gaussian integers; applications to number-theoretic algorithms
+\item Polynomial rings: Eisenstein, reduction mod $p$
+\item Applications: irreducibility testing, polynomial system solving
+\end{itemize}
+
+\subsection{28. Field Theory and Finite Fields}
+\begin{itemize}
+\item Field extensions; degree $[K:F]$; algebraic elements and minimal polynomial
+\item Splitting fields; normal and separable extensions
+\item Finite fields $\mathrm{GF}(p^n)$: structure, existence, primitive element
+\item Applications: coding theory (Reed-Solomon, LDPC), cryptography (AES, elliptic curves), pseudorandom generation
+\end{itemize}
+
+\subsection{29. Galois Theory}
+\begin{itemize}
+\item Galois group; fundamental theorem of Galois theory
+\item Computing Galois groups (examples over $\mathbb{Q}$)
+\item Solvable groups; solvability by radicals; quintic insolvability
+\item Cyclotomic fields; roots of unity
+\item Applied payoff: underpins algebraic coding theory; explains why generic degree-5 polynomial systems require numerical rather than closed-form solution
+\end{itemize}
+
+\subsection{30. Modules}
+\begin{itemize}
+\item Modules over a ring; submodules; quotients; homomorphisms
+\item Free modules; exact sequences; Snake lemma
+\item Structure theorem for finitely generated modules over a PID
+\item Tensor product of modules; Hom functor; adjunction
+\item Applications: unifies linear algebra over arbitrary rings; foundation for homological algebra
+\end{itemize}
+
+\subsection{31. Representation Theory of Finite Groups}
+\begin{itemize}
+\item Group algebras $k[G]$; representations as $G$-modules
+\item Maschke's theorem: complete reducibility in characteristic 0
+\item Irreducible representations; Schur's lemma
+\item Characters and character tables; orthogonality relations
+\item Applications: Burnside's theorem ($p^a q^b$ solvable), Fourier analysis on finite groups, design of symmetric algorithms
+\end{itemize}
+
+\subsection{32. Harmonic Analysis on Groups}
+\begin{itemize}
+\item Pontryagin duality for locally compact abelian groups
+\item Peter-Weyl theorem for compact groups
+\item Spherical harmonics as irreducible representations of $SO(3)$
+\item Generalized Fourier analysis; convolution on groups
+\item Applications: fast algorithms on groups, non-commutative Fourier analysis, physics
+\end{itemize}
+
+\subsection{33. Equivariant Maps and Geometric Deep Learning}
+\begin{itemize}
+\item Equivariant and invariant linear maps; Schur's lemma computationally
+\item $SO(3)$ and $SE(3)$ representations; spherical harmonics explicitly
+\item Equivariant neural network architectures (E3NN, NequIP)
+\item Gauge equivariance in physics-inspired models
+\item Applications: molecular property prediction, protein structure, robotics
+\end{itemize}
+
+\subsection{34. Gr\"obner Bases and Polynomial Systems}
+\begin{itemize}
+\item Polynomial ideals; term orderings; Buchberger's algorithm
+\item Reduced Gr\"obner bases; ideal membership; elimination theory
+\item Solving polynomial systems; robotics kinematics; computer vision
+\item Software: SymPy, Macaulay2, Singular
+\end{itemize}
+
+\subsection{35. Commutative Algebra and Algebraic Geometry (Brief)}
+\begin{itemize}
+\item Noetherian rings; Hilbert basis theorem
+\item Localization; local rings; geometric meaning
+\item Prime spectrum $\mathrm{Spec}(R)$; Hilbert's Nullstellensatz
+\item Applied payoff: foundations of algebraic statistics, sum-of-squares optimization, polynomial optimization
+\end{itemize}
+
+\subsection{36. Homological Algebra and Topological Data Analysis}
+\begin{itemize}
+\item Chain complexes and homology; long exact sequences
+\item Functors Hom and $\otimes$; derived functors Ext and Tor
+\item Simplicial complexes as concrete homological objects
+\item Persistent homology: filtrations, barcodes, persistence diagrams, stability theorem
+\item Software: Ripser, Gudhi, Giotto-TDA
+\item Applications: shape analysis, materials, neuroscience, time series topology
+\end{itemize}

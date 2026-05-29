@@ -1,0 +1,203 @@
+\section{PART I --- CONVEX ANALYSIS AND DUALITY}
+
+\subsection{1. Convex Sets and Functions}
+\begin{itemize}
+\item Convex sets: examples, operations, separation theorems
+\item Convex functions: characterizations (epigraph, first-order, second-order)
+\item Examples: norms, log-sum-exp, entropy, matrix functions (log det, trace exp)
+\item Generalized inequalities; cones; proper cones
+\end{itemize}
+
+\subsection{2. Duality Theory}
+\begin{itemize}
+\item Lagrangian; Lagrange dual function; weak duality
+\item Slater's condition; strong duality
+\item KKT conditions: necessary and (under convexity) sufficient
+\item Fenchel duality; primal-dual relationships
+\end{itemize}
+
+\subsection{3. Subdifferentials and Non-Smooth Analysis}
+\begin{itemize}
+\item Subdifferential of a convex function; examples ($|x|$, $\ell_1$ norm)
+\item Calculus rules: sum, chain rule, conjugate; Moreau-Rockafellar theorem
+\item Optimality conditions with subdifferentials
+\item Proximal operator: definition, properties, closed-form examples
+\end{itemize}
+
+\subsection{4. Linear Programming}
+\begin{itemize}
+\item Standard form; geometry of polytopes; vertices and basic feasible solutions
+\item Simplex method: algebraic view; pivot rules; complexity
+\item Duality in LP; complementary slackness; dual simplex
+\item Network flow problems; transportation; assignment
+\end{itemize}
+
+\subsection{5. Conic Programming}
+\begin{itemize}
+\item Second-order cone programming (SOCP): examples; duality; applications
+\item Semidefinite programming (SDP): PSD cone; dual; KKT conditions
+\item Interior point methods for conic programs
+\item Applications: eigenvalue optimization, sum-of-squares relaxations, robust optimization
+\end{itemize}
+
+\section{PART II --- GRADIENT-BASED ALGORITHMS}
+
+\subsection{6. Gradient Descent}
+\begin{itemize}
+\item Gradient descent: Lipschitz gradient; $O(1/k)$ convergence for convex objectives
+\item Linear convergence under strong convexity; rate constants
+\item Subgradient methods for non-smooth problems; $O(1/\sqrt{k})$ convergence
+\item Projected gradient descent; projection onto convex sets
+\end{itemize}
+
+\subsection{7. Accelerated and Proximal Methods}
+\begin{itemize}
+\item Nesterov acceleration: $O(1/k^2)$ optimal rate; momentum interpretation
+\item Proximal gradient method (ISTA); convergence analysis
+\item FISTA: accelerated proximal gradient
+\item Composite objectives $f(x)+g(x)$; splitting structure
+\end{itemize}
+
+\subsection{8. ADMM and Operator Splitting}
+\begin{itemize}
+\item Augmented Lagrangian; ADMM derivation
+\item Convergence analysis; sublinear and linear rates
+\item Distributed ADMM; consensus formulation
+\item Applications: LASSO, image processing, graph problems
+\end{itemize}
+
+\subsection{9. Newton and Quasi-Newton Methods}
+\begin{itemize}
+\item Newton's method: local quadratic convergence; Newton decrement
+\item Quasi-Newton: secant condition; BFGS update; convergence theory
+\item L-BFGS: limited memory; implementation; convergence
+\item Gauss-Newton; Levenberg-Marquardt for nonlinear least squares
+\end{itemize}
+
+\subsection{10. Interior Point Methods}
+\begin{itemize}
+\item Logarithmic barrier; central path; path-following
+\item Primal-dual interior point: predictor-corrector algorithm
+\item Polynomial complexity analysis
+\item Self-concordant functions (Nesterov-Nemirovskii theory, brief)
+\end{itemize}
+
+\section{PART III --- STOCHASTIC AND LARGE-SCALE METHODS}
+
+\subsection{11. Stochastic Gradient Methods}
+\begin{itemize}
+\item SGD: convergence for convex and non-convex objectives
+\item Mini-batching; learning rate schedules; tuning
+\item SGD as stochastic differential equation; continuous-time analysis
+\item Escaping saddle points: perturbed gradient descent; noise as regularization
+\end{itemize}
+
+\subsection{12. Adaptive and Momentum Methods}
+\begin{itemize}
+\item AdaGrad: coordinate-wise rates; convergence theory
+\item RMSProp; Adam; AMSGrad
+\item Convergence guarantees and counterexamples; practical behavior
+\item Learning rate warmup; cosine schedules; recent empirical results
+\end{itemize}
+
+\subsection{13. Variance Reduction}
+\begin{itemize}
+\item SVRG; SARAH; SPIDER; STORM
+\item Finite-sum structure; why variance reduction improves rates
+\item Connections to proximal methods; proximal-SVRG
+\item Linear convergence under strong convexity
+\end{itemize}
+
+\subsection{14. Distributed and Federated Optimization}
+\begin{itemize}
+\item Parallel SGD; gradient compression; error feedback
+\item Federated averaging (FedAvg); communication complexity
+\item Decentralized methods; gossip; consensus optimization
+\item Heterogeneous data; privacy; connections to differential privacy
+\end{itemize}
+
+\section{PART IV --- NONCONVEX OPTIMIZATION}
+
+\subsection{15. Landscape Analysis}
+\begin{itemize}
+\item First- and second-order necessary conditions; stationary points
+\item Saddle points; strict saddle property; Hessian structure
+\item Spurious local minima: when they exist and when they don't
+\item Loss landscapes in neural networks: overparameterization, flatness, benign non-convexity
+\end{itemize}
+
+\subsection{16. Algorithms for Nonconvex Problems}
+\begin{itemize}
+\item Convergence to $\varepsilon$-stationary points; complexity lower bounds
+\item Trust-region methods; cubic regularization; second-order methods
+\item Perturbed gradient descent for escaping strict saddles
+\item Alternating minimization and EM algorithm
+\end{itemize}
+
+\subsection{17. Coordinate Descent and Block Methods}
+\begin{itemize}
+\item Cyclic and randomized coordinate descent; convergence analysis
+\item Block coordinate descent; block-wise descent in ML
+\item EM algorithm as coordinate ascent on ELBO
+\item Applications: matrix factorization, dictionary learning
+\end{itemize}
+
+\subsection{18. Bilevel Optimization}
+\begin{itemize}
+\item Bilevel programs: formulation; examples in ML
+\item Implicit differentiation; implicit function theorem for bilevel
+\item Hypergradient methods; approximation strategies
+\item Applications: meta-learning, MAML, hyperparameter optimization
+\end{itemize}
+
+\section{PART V --- OPTIMAL CONTROL AND DYNAMIC OPTIMIZATION}
+
+\subsection{19. Discrete-Time Optimal Control}
+\begin{itemize}
+\item Dynamic programming; principle of optimality; Bellman equation
+\item Value iteration; policy iteration; approximate dynamic programming
+\item LQR in discrete time; Riccati equation
+\item MPC: model predictive control; receding horizon
+\end{itemize}
+
+\subsection{20. Continuous-Time Optimal Control}
+\begin{itemize}
+\item Pontryagin maximum principle; costate and Hamiltonian
+\item Hamilton-Jacobi-Bellman equation; verification theorems
+\item Connection to viscosity solutions (Course 3)
+\item Differential games; brief introduction
+\end{itemize}
+
+\subsection{21. Optimal Transport as Optimization}
+\begin{itemize}
+\item Discrete OT as a linear program; Sinkhorn algorithm
+\item Entropic regularization; Schr\"odinger bridge problem
+\item Wasserstein barycenters; sliced Wasserstein distance
+\item Applications: domain adaptation, generative modeling, fair ML
+\end{itemize}
+
+\section{PART VI --- APPLICATIONS}
+
+\subsection{22. Optimization in Machine Learning}
+\begin{itemize}
+\item Training neural networks: landscape, implicit regularization, flat minima
+\item Mirror descent; natural gradient; Fisher information matrix
+\item Neural tangent kernel and the linear regime
+\item Algorithmic stability and generalization (Course 8 connection)
+\end{itemize}
+
+\subsection{23. Optimization in Inverse Problems and Signal Processing}
+\begin{itemize}
+\item LASSO geometry; soft thresholding as proximal operator
+\item Basis pursuit; compressed sensing recovery algorithms
+\item Total variation regularization; wavelet sparsity
+\item ADMM for large-scale imaging
+\end{itemize}
+
+\subsection{24. Integer and Combinatorial Optimization}
+\begin{itemize}
+\item Integer programming; branch-and-bound; branch-and-cut
+\item LP relaxation; integrality gap
+\item Network flows; assignment problem; spanning trees
+\item Brief: connections to tropical geometry and max-plus algebra
+\end{itemize}

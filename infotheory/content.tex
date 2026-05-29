@@ -1,0 +1,134 @@
+\section{PART I --- INFORMATION THEORY}
+
+\subsection{1. Entropy and Mutual Information}
+\begin{itemize}
+\item Shannon entropy; joint, conditional, mutual information
+\item Relative entropy (KL divergence); properties; chain rules
+\item Differential entropy; Gaussian channels; entropy of mixtures
+\item Data processing inequality; Fano's inequality
+\end{itemize}
+
+\subsection{2. Lossless Source Coding}
+\begin{itemize}
+\item Asymptotic equipartition property (AEP); typical sequences
+\item Shannon's source coding theorem; prefix codes; Huffman coding
+\item Arithmetic coding; Lempel-Ziv universal compression
+\item Kolmogorov complexity (brief); connections to learning
+\end{itemize}
+
+\subsection{3. Channel Coding}
+\begin{itemize}
+\item Channel capacity; Shannon's noisy-channel theorem; proof via typicality
+\item Gaussian channel; water-filling; multi-antenna (MIMO) brief
+\item Linear codes; Reed-Solomon (from finite fields, Course 2); LDPC
+\item Polar codes and capacity-achieving constructions (brief)
+\end{itemize}
+
+\subsection{4. Information-Theoretic Inequalities}
+\begin{itemize}
+\item Log-sum inequality; convexity of KL divergence
+\item Fisher information; Cram\'er-Rao bound; van Trees inequality
+\item Entropy power inequality; de Bruijn's identity
+\item Connections to Course 1 (Sections 4, 28) and Course 5
+\end{itemize}
+
+\subsection{5. Information Theory and Statistics}
+\begin{itemize}
+\item Hypothesis testing; Neyman-Pearson lemma; error exponents
+\item Chernoff bound; Stein's lemma; Hoeffding bound
+\item Method of types; empirical entropy; connection to large deviations
+\item Universal hypothesis testing; I-projection
+\end{itemize}
+
+\subsection{6. Information Theory and Machine Learning}
+\begin{itemize}
+\item Information bottleneck; rate-distortion perspective on representations
+\item MI estimation with neural networks (MINE, NWJ bounds)
+\item Differential privacy: formal definition; mechanisms; composition
+\item Rate-distortion theory and representation learning; connections to VAEs
+\end{itemize}
+
+\section{PART II --- STATISTICAL ESTIMATION THEORY}
+
+\subsection{7. Classical Estimation}
+\begin{itemize}
+\item Maximum likelihood; consistency; asymptotic normality; efficiency
+\item Cram\'er-Rao bound; Fisher information matrix; Bhattacharyya bound
+\item M-estimators; robustness; breakdown point; influence function
+\item Bayesian estimation; conjugate priors; posterior; minimax Bayes
+\end{itemize}
+
+\subsection{8. Exponential Families and Sufficient Statistics}
+\begin{itemize}
+\item Natural parameters; log-partition function; moment parameterization
+\item Sufficient statistics; Fisher-Neyman factorization; completeness
+\item Rao-Blackwell theorem; Lehmann-Scheff\'e theorem
+\item Connections to information geometry (Course 7, Section 6)
+\end{itemize}
+
+\subsection{9. Minimax Theory and Optimal Rates}
+\begin{itemize}
+\item Minimax risk; parameter space complexity; Le Cam's two-point method
+\item Assouad's lemma; Fano's inequality applied to estimation
+\item Minimax rates for nonparametric regression and density estimation
+\item Adaptive estimation: Lepski's method; oracle inequalities; wavelet thresholding
+\end{itemize}
+
+\section{PART III --- STATISTICAL LEARNING THEORY}
+
+\subsection{10. PAC Learning Framework}
+\begin{itemize}
+\item PAC model; sample complexity; $\varepsilon$-$\delta$ learnability; realizable and agnostic
+\item VC dimension; growth function; Sauer-Shelah lemma
+\item Fundamental theorem of statistical learning: VC characterizes PAC learnability
+\item Examples: halfspaces, decision trees, neural networks
+\end{itemize}
+
+\subsection{11. Rademacher Complexity and Uniform Convergence}
+\begin{itemize}
+\item Rademacher complexity; symmetrization lemma
+\item Covering numbers; metric entropy; Dudley's chaining integral
+\item Generalization bounds via Rademacher complexity; data-dependent bounds
+\item PAC-Bayes bounds; KL-regularized objectives; connections to Bayesian methods
+\end{itemize}
+
+\subsection{12. Stability, Compression, and Generalization}
+\begin{itemize}
+\item Algorithmic stability: uniform stability; connection to generalization
+\item On-average stability; SGD is stable; stability of noisy algorithms
+\item Compression-based bounds; mutual information bounds
+\item Connections to regularization; data augmentation as stability
+\end{itemize}
+
+\subsection{13. Kernel Methods and RKHS}
+\begin{itemize}
+\item Reproducing kernel Hilbert spaces; Mercer's theorem; feature maps
+\item Kernel ridge regression; SVMs; representer theorem
+\item Spectral analysis of kernels; eigenvalue decay; approximation rates
+\item Random features; Nystr\"om approximation; scalable kernel methods
+\end{itemize}
+
+\subsection{14. High-Dimensional Statistics}
+\begin{itemize}
+\item Curse of dimensionality; concentration of measure; geometric results
+\item Lasso: restricted eigenvalue condition; oracle inequalities; de-biasing
+\item Covariance estimation; sample covariance in high dimensions; shrinkage
+\item Connections to compressed sensing (Course 1, Section 33)
+\end{itemize}
+
+\subsection{15. Neural Network Theory}
+\begin{itemize}
+\item Overparameterization; benign overfitting; interpolation threshold
+\item Neural tangent kernel (NTK): linearization; kernel regime; lazy training
+\item Mean field theory of two-layer networks; Wasserstein gradient flow
+\item Double descent: risk curve; model and epoch double descent
+\item Implicit regularization of gradient descent; connections to sparsity
+\end{itemize}
+
+\subsection{16. Online Learning and Bandits}
+\begin{itemize}
+\item Online convex optimization; regret; minimax regret; expert advice
+\item Hedge (Multiplicative Weights) algorithm; regret bounds; connections to entropy
+\item Multi-armed bandits: UCB; Thompson sampling; lower bounds; Lai-Robbins
+\item Contextual bandits; linear bandits; connections to RL
+\end{itemize}
